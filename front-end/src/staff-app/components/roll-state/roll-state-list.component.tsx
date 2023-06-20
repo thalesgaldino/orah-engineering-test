@@ -7,13 +7,13 @@ import { RolllStateType } from "shared/models/roll"
 
 interface Props {
   stateList: StateList[]
-  onItemClick?: (type: ItemType) => void
   size?: number
+  onFilterBy?: (type: string) => void
 }
-export const RollStateList: React.FC<Props> = ({ stateList, size = 14, onItemClick }) => {
+export const RollStateList: React.FC<Props> = ({ stateList, size = 14, onFilterBy }) => {
   const onClick = (type: ItemType) => {
-    if (onItemClick) {
-      onItemClick(type)
+    if (onFilterBy) {
+      onFilterBy(type)
     }
   }
 

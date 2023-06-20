@@ -14,7 +14,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "src/*": ["src/*"],
+      "tests/*": ["__tests__/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "__tests__/home-board.page.test.js"]
 }
