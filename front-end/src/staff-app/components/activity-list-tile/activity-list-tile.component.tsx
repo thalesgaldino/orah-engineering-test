@@ -26,10 +26,12 @@ export const ActivityListTile: React.FC<Props> = (props: Props) => {
       <div>
       <S.Content>
           <>{`Date: ${formatRelative(new Date(parseISO(`${date}`)), new Date())}`}</>
-          {map( students, ((student, index) => {
-            if (student_roll_states && student_roll_states[student.id])
-              return <div key={`keys-${index}`} >{`${student.first_name}: ${student_roll_states[student.id]}`}</div>
-          }))}
+          <ul>
+            {map( students, ((student, index) => {
+              if (student_roll_states && student_roll_states[student.id])
+                return <li key={`keys-${index}`} >{`${student.first_name} ${student.last_name}: ${student_roll_states[student.id]}`}</li>
+            }))}
+          </ul>
         </S.Content>
       </div>
     </S.Container>
