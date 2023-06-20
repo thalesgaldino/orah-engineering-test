@@ -95,7 +95,7 @@ export const HomeBoardPage: React.FC = () => {
         setIsRollMode(false)
         navigate("/staff/activity");
       }).catch((err) => {
-        console.log("fail saved!!! ", err)
+        console.log("error!!! ", err)
       });
     }
   }
